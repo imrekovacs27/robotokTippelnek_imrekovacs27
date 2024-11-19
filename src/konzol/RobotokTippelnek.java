@@ -8,6 +8,7 @@ public class RobotokTippelnek {
         System.out.println("Három robot tippel egyet-egyet:");
         /* tippelések beállítása: */
         int szam1;
+        int szam2;
         /* Random osztály használattal: */
         Random rnd = new Random();
         szam1 = rnd.nextInt(1, 11);

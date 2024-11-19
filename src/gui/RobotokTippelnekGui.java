@@ -361,6 +361,11 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jMenu1.add(jMenuItem3);
 
         jMenuItem2.setText("Alapállapot");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
         jMenu1.add(jSeparator1);
 
@@ -437,8 +442,10 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         int also = (int) numMin.getValue();
         int felso = (int)numMax.getValue();
         int szam1;
+        int szam2;
         int db = felso - also + 1;
         szam1 = (int)(Math.random() * db) + also;
+        szam2 = (int) szam1 +(Math.random() * db)+ also;
         
         txtVelSzam1.setText(szam1 + "");
         txtVelSzam2.setText(szam1 + "");
@@ -447,6 +454,10 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         kilepes();
     }//GEN-LAST:event_formWindowClosing
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void kilepes(){
         String cim = "KILÉPÉS";
